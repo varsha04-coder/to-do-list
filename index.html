@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .task-list {
+            list-style: none;
+            padding: 0;
+        }
+        .task-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .task-item.completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .task-buttons {
+            display: flex;
+            gap: 5px;
+        }
+        .task-buttons button {
+            padding: 5px;
+            cursor: pointer;
+            border: none;
+            color: white;
+            border-radius: 5px;
+        }
+        .edit {
+            background-color: #007bff;
+        }
+        .delete {
+            background-color: #dc3545;
+        }
+        .complete {
+            background-color: #28a745;
+        }
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Reset margin */
+}
+
+.container {
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    width: 400px;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow from rounded corners */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px; /* Spacing below title */
+    color: #333; /* Darker color for better contrast */
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s; /* Transition for border color */
+}
+
+input[type="text"]:focus {
+    border-color: #28a745; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s; /* Transition for button color */
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px; /* Limit height for scrolling */
+    overflow-y: auto; /* Enable scrolling */
+    margin-bottom: 20px; /* Spacing below task lists */
+}
+
+.task-item {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px; /* Rounded corners for task items */
+    transition: background-color 0.3s; /* Transition for background color */
+}
+
+.task-item:hover {
+    background-color: #e9ecef; /* Light hover effect */
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    color: gray;
+    background-color: #d4edda; /* Light green background for completed tasks */
+}
+
+.task-buttons {
+    display: flex;
+    gap: 5px;
+}
+
+.task-buttons button {
+    padding: 5px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s; /* Transition for button color */
+}
+
+.edit {
+    background-color: #007bff; /* Blue for edit */
+}
+
+.edit:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.delete {
+    background-color: #dc3545; /* Red for delete */
+}
+
+.delete:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.complete {
+    background-color: #28a745; /* Green for complete */
+}
+
+.complete:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(list.png); /* Replace 'your-image.jpg' with your image file name or URL */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; /* Reset margin */
+}
+
+/* Adjust container background */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Use a semi-transparent white background */
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+    width: 400px;
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow from rounded corners */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>To-Do List</h2>
+        <input type="text" id="taskInput" placeholder="Enter a new task...">
+        <button onclick="addTask()">Add Task</button>
+
+        <h3>Pending Tasks</h3>
+        <ul id="pendingTasks" class="task-list"></ul>
+
+        <h3>Completed Tasks</h3>
+        <ul id="completedTasks" class="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
